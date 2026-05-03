@@ -1,5 +1,6 @@
 node_modules
 dist
+.vite
 public/photo-manifest.json
 .DS_Store
 *.local
