@@ -11,6 +11,6 @@ export function photoManifestUrl(): string {
 /** Add `public/audio/song.mp3` before deploy, or swap the filename here. */
 export const BIRTHDAY_AUDIO_PATH = "/audio/song.mp3";
 
-/** Footer date — fixed text only; change here if you want a different day on screen. */
+/** Fixed celebration date (shown above photos). Edit if needed. */
 export const CELEBRATION_DATE_DISPLAY = "Sunday, 3 May 2026";
 export const CELEBRATION_DATE_ISO = "2026-05-03";

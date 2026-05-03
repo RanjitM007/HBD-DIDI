@@ -358,12 +358,22 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.45);
-  text-transform: uppercase;
   pointer-events: none;
   z-index: 2;
+  text-align: center;
+}
+
+.photo-stage__hint--date {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(252, 211, 253, 0.88);
+  text-transform: none;
+  text-shadow: 0 0 24px rgba(244, 114, 182, 0.35);
+}
+
+.photo-stage__hint--date time {
+  font-variant-numeric: tabular-nums;
 }
 
 .photo-stage__ring {
@@ -691,20 +701,3 @@
   color: #fecaca;
 }
 
-.page-footer-corner {
-  position: fixed;
-  bottom: 0.65rem;
-  right: 0.75rem;
-  z-index: 12;
-  margin: 0;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: rgba(244, 240, 255, 0.38);
-  pointer-events: none;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
-}
-
-.page-footer-corner time {
-  font-variant-numeric: tabular-nums;
-}

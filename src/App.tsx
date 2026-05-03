@@ -2,12 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ConfettiCanvas } from "./components/ConfettiCanvas";
 import { FloatingDecor } from "./components/FloatingDecor";
 import { MemoryWall } from "./components/MemoryWall";
-import {
-  BIRTHDAY_AUDIO_PATH,
-  CELEBRATION_DATE_DISPLAY,
-  CELEBRATION_DATE_ISO,
-  photoManifestUrl,
-} from "./mediaConfig";
+import { BIRTHDAY_AUDIO_PATH, photoManifestUrl } from "./mediaConfig";
 import "./App.css";
 
 function formatTime(seconds: number): string {
@@ -126,7 +121,7 @@ export default function App() {
         <header className="hero">
           <p className="hero__eyebrow">It’s your day</p>
           <h1 className="hero__title">
-            Happy <span className="hero__gradient">Birthday</span>
+            Happy <span className="hero__gradient">Birthday DIDI</span>
           </h1>
           <p className="hero__sub">
             Cake, confetti, chaos — and every frame below is a little piece of you.
@@ -191,10 +186,6 @@ export default function App() {
           </p>
         ) : null}
       </div>
-
-      <footer className="page-footer-corner">
-        <time dateTime={CELEBRATION_DATE_ISO}>{CELEBRATION_DATE_DISPLAY}</time>
-      </footer>
 
       <audio
         ref={audioRef}

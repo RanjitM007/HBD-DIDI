@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { CELEBRATION_DATE_DISPLAY, CELEBRATION_DATE_ISO } from "../mediaConfig";
 
 type Props = { paths: string[] };
 
@@ -176,6 +177,9 @@ export function MemoryWall({ paths }: Props) {
         onMouseLeave={resetTilt}
       >
         <div className="photo-stage__ring" aria-hidden />
+        <p className="photo-stage__hint photo-stage__hint--date">
+          <time dateTime={CELEBRATION_DATE_ISO}>{CELEBRATION_DATE_DISPLAY}</time>
+        </p>
         <div className="photo-single-3d">
           <PolaroidFigure src={src} />
         </div>
@@ -187,7 +191,7 @@ export function MemoryWall({ paths }: Props) {
     <section
       ref={stageRef}
       className="photo-stage"
-      aria-label="Photo memories — 3D carousel, drag to spin"
+      aria-label="Photo memories — 3D carousel; drag sideways to spin, move mouse for depth"
       onMouseMove={onMouseMove}
       onMouseLeave={resetTilt}
       onPointerDown={onPointerDown}
@@ -196,7 +200,9 @@ export function MemoryWall({ paths }: Props) {
       onPointerCancel={onPointerUp}
     >
       <div className="photo-stage__ring" aria-hidden />
-      <p className="photo-stage__hint">Drag sideways to spin · move mouse for depth</p>
+      <p className="photo-stage__hint photo-stage__hint--date">
+        <time dateTime={CELEBRATION_DATE_ISO}>{CELEBRATION_DATE_DISPLAY}</time>
+      </p>
       <div className="photo-skew">
         <div className="photo-pivot-inner">
           <div ref={rotorRef} className="photo-rotor">
